@@ -19,13 +19,21 @@ The last two directories, `carlini` and `deepfool`, provide scripts specifically
 
 The initial phase evaluates the **accuracy of a face recognition network** (referred to as `NN1`) on this constructed test set. This phase is crucial for establishing a baseline performance measure against which the impact of adversarial attacks will be assessed.
 
+![02](https://github.com/user-attachments/assets/8f3c9049-f50f-4090-92f1-d965c828e082)
+
 ## ⚔ **Adversarial Attacks**
 
 Subsequently, **adversarial examples** will be generated using the `ART` library, targeting `NN1`. The impact of these adversarial examples will be assessed using **Security Evaluation Curves**. These curves will provide a visual representation of the system's vulnerability to adversarial attacks.
 
+![05](https://github.com/user-attachments/assets/6bf31b35-1550-41fb-baed-39e1147e5ddc)
+![21](https://github.com/user-attachments/assets/45741d71-9191-4410-8733-9ef17105774c)
+
 ## 🔄 **Transferability Evaluation**
 
 An additional classifier, trained on the VGG-Face2 dataset, will be chosen and evaluated on the "clean" test set to study the **transferability of adversarial examples** to this second classifier (`NN2`). This step is essential for understanding how adversarial examples affect different models and to what extent adversarial vulnerabilities are shared across classifiers.
+
+![23](https://github.com/user-attachments/assets/30195c21-aedc-4d75-ad4a-caeed48d6f52)
+![33](https://github.com/user-attachments/assets/48f7aec3-8ee7-49e8-80c2-715705b52268)
 
 ## 🛡️ **Defense Mechanisms**
 
